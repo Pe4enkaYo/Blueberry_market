@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluberry</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <div class="gradient-wrapper">
+        <img src="/static/images/logotip.png" alt="Логотип" class="logo">
+        <input type="text" id="searchInput" placeholder="Что хотите купить?" class="search-input">
+    </div>
+
+    <!-- Секция "Для вас" -->
+    <div class="section">
+        <h2 class="section-title">🔥 Для вас</h2>
+        <div class="scroll-container" id="forYouContainer">
+            <div class="cards-wrapper" id="forYouCards"></div>
+        </div>
+    </div>
+
+    <!-- Секция "Хиты продаж" -->
+    <div class="section">
+        <h2 class="section-title">⭐ Хиты продаж</h2>
+        <div class="scroll-container" id="hitsContainer">
+            <div class="cards-wrapper" id="hitsCards"></div>
+        </div>
+    </div>
+
+    <!-- Все товары -->
+    <div class="section">
+        <h2 class="section-title">📦 Все товары</h2>
+        <div class="vertical-list" id="allProducts"></div>
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <script src="static/script.js" ></script>
+</body>
+</html>
