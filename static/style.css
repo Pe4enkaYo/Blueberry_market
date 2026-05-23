@@ -88,6 +88,23 @@
             cursor: pointer;
         }
 
+        .product-card_inside_image {
+            width: 650px;
+            height: auto;            
+            padding-left: 5%;            
+        }
+        .paiment-box {
+            display: flex;
+            width: 200px;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
         .product-card:hover {
             transform: translateY(-4px);
         }

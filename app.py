@@ -12,6 +12,7 @@ def get_db_connection():
 def index():
     return render_template('index.html')
 
+
 @app.route('/api/recommendations')
 def get_recommendations():
     conn = get_db_connection()
@@ -43,5 +44,17 @@ def get_all():
     conn.close()
     return jsonify([dict(row) for row in all_items])
 
+@app.route('/product/<int:product_card_id>')
+def product_page(product_card_id):
+    conn = get_db_connection()
+    product_info = conn.execute('''
+        SELECT name, price, photo, brand, material, color, seller 
+        FROM cloth_secure WHERE id = ? 
+    ''', (product_card_id,)).fetchone()
+    
+    conn.close()
+    return render_template('product.html', product=product_info)
+    
+        
 if __name__ == '__main__':
     app.run(debug=True)

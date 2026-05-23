@@ -1,14 +1,29 @@
 function createProductCard(product) {
     const photo = product.photo && product.photo !== 'null' ? product.photo : 'https://via.placeholder.com/200';
     return `
-        <div class="product-card" onclick="alert('Товар: ${product.name}\nЦена: ${product.price} ₽')">
+        <a href="/product/${product.id}" class="product-card">
             <img class="product-image" src="${photo}" alt="${product.name}">
             <div class="product-info">
                 <div class="product-name">${escapeHtml(product.name)}</div>
                 <div class="product-price">${product.price.toLocaleString()} ₽</div>
                 <div class="product-brand">${escapeHtml(product.brand || '')}</div>
             </div>
+        </a>
+    `;
+}
+function createPaiment_box(product) {
+    const photo = product.photo && product.photo !== 'null' ? product.photo : 'https://via.placeholder.com/200';
+    return `
+        <div class="product-card">
+            <img class="product-image" src="${photo}" alt="${product.name}">
         </div>
+        <div>
+            <p> Тут будет описание</p>
+        </div>
+        <div class="paiment-box">
+                <div class="product-price">${product.price.toLocaleString()} ₽</div>              
+        </div>
+
     `;
 }
 

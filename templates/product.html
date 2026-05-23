@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluberry</title>
+    <link rel="stylesheet" href="\static\style.css">
+</head>
+<body>      
+    <div class="gradient-wrapper">
+        <img src="/static/images/logotip.png" alt="Логотип" class="logo">
+        <input type="text" id="searchInput" placeholder="Что хотите купить?" class="search-input">
+    </div>
+    <div class="cards-wrapper">
+    <div> 
+        <img class="product-card_inside_image" src="{{ product.photo }}" alt="{{product.name}}">
+    </div>
+    <div> 
+        <p>Название: {{product.name}}<br>
+           Бренд: {{brand}}<br>
+           Материал: {{material}}<br>
+           Цвет: {{color}}<br>
+           Продавец: {{seller}}</p>
+    </div>
+    <div class="paiment-box">
+        Цена:{{product.price}}
+    </div>
+    </div>
+</body>
+</html>
+
