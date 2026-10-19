@@ -1,0 +1,21 @@
+ 
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+
+# База данных (её должен создавать init_db.py)
+database.db
+*.db
+*.sqlite3
+
+# Бинарники и мусор
+sqlite3.exe
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
